@@ -89,6 +89,28 @@ Output: `"cabac"`
 
 ---
 
+## 🧮 Bonus: SCS via LCS Function (Efficient Space + Logic) 🧠
+
+This approach cleverly reuses a **space-optimized LCS function** to compute the length of the Shortest Common Supersequence!
+
+### 🔧 How it works:
+
+* Step 1: Calculate LCS length using a 2-row DP table.
+* Step 2: Use formula: `SCS Length = len(text1) + len(text2) - LCS Length`
+
+### 💡 Why it's smart:
+
+* Reuses LCS logic 🔁
+* Saves space with just two rows 💾
+* Keeps code clean and modular ✨
+
+### 🚀 Complexity:
+
+* Time: **O(n \* m)**
+* Space: **O(2 \* min(n, m))**
+
+---
+
 ## 🎓 Final Thoughts
 
 * 🧬 **SCS is a super useful variation of LCS**.
