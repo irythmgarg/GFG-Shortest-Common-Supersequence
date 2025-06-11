@@ -111,6 +111,32 @@ This approach cleverly reuses a **space-optimized LCS function** to compute the 
 
 ---
 
+## 🎨 Bonus: Constructing the Shortest Common Supersequence (Full String) 🧵
+
+This approach prints the actual shortest common supersequence using a DP table and trace-back.
+
+### 🧠 Idea:
+
+* Construct full DP table and a direction table.
+* Backtrack to build the actual string using directional arrows (⬅️, ⬆️, ↖️).
+
+### ✨ Highlights:
+
+* Use a `char` matrix (`finalans`) to record directions.
+* When backtracking:
+
+  * `'D'` ➡️ characters match ➡️ take once
+  * `'U'` ➡️ take from `s1`
+  * `'L'` ➡️ take from `s2`
+* Append remaining characters if one string is exhausted.
+
+### 📈 Complexity:
+
+* Time: **O(n \* m)**
+* Space: **O(n \* m)** (for full table + reconstruction)
+
+---
+
 ## 🎓 Final Thoughts
 
 * 🧬 **SCS is a super useful variation of LCS**.
